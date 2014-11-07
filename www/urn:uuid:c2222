@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text"/>
+<title></title>
+</head>
+<body>
+    {
+      "id": "urn:uuid:c2222",
+      "kind": "http://schemas.ogf.org/occi/infrastructure#compute",
+      "mixins": [
+      		"http.//schemas.ogf.org/infrastructure/compute#RMIMetricContainer"
+		],
+      "attributes": { "occi": { "compute": 
+      		    { "speed": 2, "memory": 4, "cores": 2,
+		      "MetricContainerIPAddress": "192.168.5.3",
+		      "MetricContainerPort": 12312 }}},
+      "actions": []
+    }
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="application/occi+json"/>
+<title></title>
+</head>
+<body>
+    {
+      "id": "urn:uuid:2345",
+      "kind": "http://schemas.ogf.org/occi/monitoring#collector",
+      "mixins": [
+        "http://example.com/occi/monitoring/metric#CPUPercent"
+      ],
+      "attributes": {
+        "occi": {
+          "collector": {
+            "period": 3
+            }
+          },
+        "com": {
+          "example": {
+            "occi": {
+              "monitoring": {
+                "CPUPercent" : {"out": "a"},    
+                "IsReachable" : {"hostname": "192.168.5.2","maxdelay": 1000,"out":"b"}
+              }
+            }
+          }
+        }
+      },
+      "actions": [],
+      "target":"urn:uuid:s1111",
+      "source":"urn:uuid:c2222"
+    }
+</body>
+</html>

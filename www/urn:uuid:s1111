@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="application/occi+json"/>
+<title></title>
+</head>
+<body>
+   {
+      "id": "urn:uuid:s1111",
+      "kind": "http://schemas.ogf.org/occi/monitoring#sensor",
+      "mixins": [
+        "http://example.com/occi/monitoring/publisher#EmailOnAlarm",
+        "http://example.com/occi/monitoring/aggregator#EWMA"
+      ],
+      "attributes": {
+        "occi": {
+          "sensor": {
+             "period": 60, "timebase": 1386925386,
+             "timestart": 600, "timestop": 3600,
+             "networkInterface": "eth1"}
+          },
+        "com": {
+          "example": {
+            "occi": {
+              "monitoring": {
+                "SendUDP" : {"udpAddr": "192.168.5.1:8888","input": "c"},
+                "EWMA" : {"gain": 16,"instream": "a","outstream": "c"},
+                "Log" : {"filename": "my/log/file","in_msg": "b"}
+              }
+            }
+          }
+        }
+      },
+      "links": ["urn:uuid:2345"]
+    }
+</body>
+</html>
