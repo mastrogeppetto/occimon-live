@@ -23,7 +23,7 @@ $ vagrant up
 ```
 The system is generated and booted. The first time you run this command a disk image will be downloaded, so expect a significant delay.
 
-3. Launch the metric container on pc1. Use the command "probe.sh" with the id of the monitored resource urn:uuid:c2222
+3. Launch the metric container on **pc1**. Use the command "probe.sh" with the id of the monitored resource urn:uuid:c2222
 
 ```
 me@mydesktop:~/demodir$ vagrant ssh pc1
@@ -34,7 +34,7 @@ Metric container is ready (192.168.5.3:12312)
 ```
 The metric container is now up and running, and waits for input from the sensor
 
-4. Launch the sensor container on sensor. Use the command "sensor.sh" with the id of the sensor resource(s): urn:uuid:s1111
+4. Launch the sensor container on **sensor**. Use the command "sensor.sh" with the id of the sensor resource(s): urn:uuid:s1111
 
 ```
 me@mydesktop:~/demodir$ vagrant ssh sensor
@@ -52,8 +52,17 @@ ewma input: 1.0
 sendudp: sending 1.0
 ...
 ```
+The sensor description is loaded from the web server. The sensor thread opens an input socket and fetches from the server the description of the collector. Using this information it instructs the metric container on **pc1** to start its activity. Data is received, processed with the EWMA filter, and delivered as a stream of datagrams to the guest machine.
 
-
+Now you can switch on the guest machine and observe the stream of UDP packets:
+```
+me@mydesktop:~/Desktop$ nc -ul 8888
+Data: 2.3689306
+Data: 2.2884052
+Data: 2.2126167
+Data: 2.1412864
+...
+```
 
 
 * Version
