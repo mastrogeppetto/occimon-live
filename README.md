@@ -74,9 +74,12 @@ service httpserver start
 ```
 
 #References#
-* [research paper](https://bitbucket.org/tutorials/markdowndemo) that illustrates the concepts behind the extension and how it works
-* [proposal] a draft of the OGF document that defines the extension
-* [repository] of the Java code of the metricContainer and of the sensorContainer as an Eclipse project.
+* [research paper](http://eprints.adm.unipi.it/1913/1/paper.pdf) that illustrates the concepts behind the extension and how it works
+
+Ciuffoletti, Augusto (2014) A simple and generic interface for a Cloud Monitoring System. In: CLOSER 2014 - 4th International Conference on Cloud Computing and Services Science, April 2-5 2014, Barcelona.
+
+* [proposal](http://redmine.ogf.org/projects/occi-wg/repository/show?rev=monitoring) a draft of the OGF document that defines the extension
+* [repository](https://bitbucket.org/augusto_ciuffoletti/occi-monitoring) of the Java code of the metricContainer and of the sensorContainer as an Eclipse project.
 
 * Version
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
