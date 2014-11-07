@@ -15,15 +15,15 @@ The monitoring consists of the measurement of the CPU load on the resource: the 
 
 You need to have DropBox and Vagrant installed on the guest machine to run the demo. The first time you need also a fast Internet connection to download approx. 500Mb for a disk image (Vagrant box)
 
-1. Clone this repository into an empty directory
-2. Run
+* Clone this repository into an empty directory
+* Run
 
 ```
 $ vagrant up
 ```
 The system is generated and booted. The first time you run this command a disk image will be downloaded, so expect a significant delay.
 
-3. Launch the metric container on **pc1**. Use the command "probe.sh" with the id of the monitored resource urn:uuid:c2222
+* Launch the metric container on **pc1**. Use the command "probe.sh" with the id of the monitored resource urn:uuid:c2222
 
 ```
 me@mydesktop:~/demodir$ vagrant ssh pc1
@@ -34,7 +34,7 @@ Metric container is ready (192.168.5.3:12312)
 ```
 The metric container is now up and running, and waits for input from the sensor
 
-4. Launch the sensor container on **sensor**. Use the command "sensor.sh" with the id of the sensor resource(s): urn:uuid:s1111
+* Launch the sensor container on **sensor**. Use the command "sensor.sh" with the id of the sensor resource(s): urn:uuid:s1111
 
 ```
 me@mydesktop:~/demodir$ vagrant ssh sensor
@@ -54,7 +54,7 @@ sendudp: sending 1.0
 ```
 The sensor description is loaded from the web server. The sensor thread opens an input socket and fetches from the server the description of the collector. Using this information it instructs the metric container on **pc1** to start its activity. Data is received, processed with the EWMA filter, and delivered as a stream of datagrams to the guest machine.
 
-Now you can switch on the guest machine and observe the stream of UDP packets:
+* Now you can switch on the guest machine and observe the stream of UDP packets:
 ```
 me@mydesktop:~/Desktop$ nc -ul 8888
 Data: 2.3689306
@@ -80,8 +80,6 @@ Ciuffoletti, Augusto (2014) A simple and generic interface for a Cloud Monitorin
 
 * [proposal](http://redmine.ogf.org/projects/occi-wg/repository/show?rev=monitoring) a draft of the OGF document that defines the extension
 * [repository](https://bitbucket.org/augusto_ciuffoletti/occi-monitoring) of the Java code of the metricContainer and of the sensorContainer as an Eclipse project.
-
-* Version
 
 ### Who do I talk to? ###
 
