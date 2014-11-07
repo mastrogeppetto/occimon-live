@@ -1,5 +1,5 @@
 # Summary #
-This repository contains all is needed to run a simple demo of the OCCI monitoring Extension. The demo does not contain the front-end of the API, the one across which the user inputs the description of the monitoriing framework, and assumes that the description has already been loaded. Instead, the demo contains the engine that, using the description, creates the monitoring framework.
+This repository contains all is needed to run a simple demo of the OCCI Monitoring extension. The demo does not contain the front-end of the API, the one across which the user inputs the description of the monitoriing framework, and assumes that the description has already been loaded. Instead, the demo contains the engine that, using the description, creates the monitoring framework.
 
 The monitored system is composed of three virtual machines
 
