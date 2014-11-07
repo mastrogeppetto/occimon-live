@@ -19,6 +19,7 @@ You need to have DropBox and Vagrant installed on the guest machine to run the d
 * Run
 
 ```
+#!console
 $ vagrant up
 ```
 The system is generated and booted. The first time you run this command a disk image will be downloaded, so expect a significant delay.
@@ -26,6 +27,7 @@ The system is generated and booted. The first time you run this command a disk i
 * Launch the metric container on **pc1**. Use the command "probe.sh" with the id of the monitored resource urn:uuid:c2222
 
 ```
+#!console
 me@mydesktop:~/demodir$ vagrant ssh pc1
 ...
 vagrant@pc1:~$ ./probe.sh urn:uuid:c2222
@@ -37,6 +39,7 @@ The metric container is now up and running, and waits for input from the sensor
 * Launch the sensor container on **sensor**. Use the command "sensor.sh" with the id of the sensor resource(s): urn:uuid:s1111
 
 ```
+#!console
 me@mydesktop:~/demodir$ vagrant ssh sensor
 ...
 vagrant@sensor:~$ ./sensor.sh urn:uuid:s1111
@@ -56,6 +59,7 @@ The sensor description is loaded from the web server. The sensor thread opens an
 
 * Now you can switch on the guest machine and observe the stream of UDP packets:
 ```
+#!console
 me@mydesktop:~/Desktop$ nc -ul 8888
 Data: 2.3689306
 Data: 2.2884052
@@ -69,6 +73,7 @@ The configuration files are in the www directory: you can play with them. In ord
 
 To restart the server 
 ```
+#!console
 sudo killall httpserver.py
 sudo service httpserver start
 ```
