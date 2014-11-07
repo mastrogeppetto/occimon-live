@@ -82,24 +82,8 @@ Ciuffoletti, Augusto (2014) A simple and generic interface for a Cloud Monitorin
 * [repository](https://bitbucket.org/augusto_ciuffoletti/occi-monitoring) of the Java code of the metricContainer and of the sensorContainer as an Eclipse project.
 
 * Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* augusto.at.di.unipi.it
+* OCCI working group maillist
