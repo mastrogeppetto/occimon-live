@@ -70,7 +70,7 @@ The configuration files are in the www directory: you can play with them. In ord
 To restart the server 
 ```
 sudo killall httpserver.py
-service httpserver start
+sudo service httpserver start
 ```
 
 #References#
