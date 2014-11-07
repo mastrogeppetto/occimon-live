@@ -63,7 +63,20 @@ Data: 2.2126167
 Data: 2.1412864
 ...
 ```
+#Under the hood...#
 
+The configuration files are in the www directory: you can play with them. In order to see the results you need to stop the whole and restart the server, and the components.
+
+To restart the server 
+```
+sudo killall httpserver.py
+service httpserver start
+```
+
+#References#
+* [research paper](https://bitbucket.org/tutorials/markdowndemo) that illustrates the concepts behind the extension and how it works
+* [proposal] a draft of the OGF document that defines the extension
+* [repository] of the Java code of the metricContainer and of the sensorContainer as an Eclipse project.
 
 * Version
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
