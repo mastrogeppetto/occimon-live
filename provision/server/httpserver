@@ -15,15 +15,18 @@ PATH=/sbin:/bin
 case "$1" in
   start)
 	log_action_msg "Starting HTTP server"
-	start-stop-daemon --start --background -x /vagrant/bin/httpServer.py	
+	start-stop-daemon --start --make-pidfile --pidfile /run/httpserver --background -x /vagrant/bin/httpServer.py	
 	;;
   restart|reload|force-reload)
-	echo "Error: argument '$1' not supported" >&2
-	exit 3
+	log_action_msg "Stopping HTTP server"
+	start-stop-daemon --stop --pidfile /run/httpserver
+	sleep 1
+	log_action_msg "Starting HTTP server"
+	start-stop-daemon --start --make-pidfile --pidfile /run/httpserver --background -x /vagrant/bin/httpServer.py	
 	;;
   stop)
 	log_action_msg "Stopping HTTP server"
-	/usr/bin/killall httpServer.py
+	start-stop-daemon --stop --pidfile /run/httpserver
 	;;
   *)
 	echo "Usage: $0 start|stop" >&2
