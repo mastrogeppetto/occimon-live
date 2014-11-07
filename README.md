@@ -74,8 +74,7 @@ The configuration files are in the www directory: you can play with them. In ord
 To restart the server 
 ```
 #!console
-sudo killall httpserver.py
-sudo service httpserver start
+sudo service httpserver restart
 ```
 
 #References#
