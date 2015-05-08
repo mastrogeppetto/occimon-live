@@ -13,7 +13,7 @@ The monitoring consists of the measurement of the CPU load on the resource: the 
 
 #HOWTO#
 
-You need to have DropBox and Vagrant installed on the guest machine to run the demo. The first time you need also a fast Internet connection to download approx. 500Mb for a disk image (Vagrant box)
+You need to have VirtualBox and Vagrant installed on the guest machine to run the demo. The first time you need also a fast Internet connection to download approx. 500Mb for a disk image (Vagrant box)
 
 * Clone this repository into an empty directory
 * Run
