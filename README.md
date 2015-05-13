@@ -15,7 +15,13 @@ The monitoring consists of the measurement of the CPU load on the resource: the 
 
 You need to have VirtualBox and Vagrant installed on the guest machine to run the demo. The first time you need also a fast Internet connection to download approx. 500Mb for a disk image (Vagrant box)
 
-* Clone this repository into an empty directory
+* Clone this repository are step into the created directory
+```
+#!console
+$ git clone https://bitbucket.org/augusto_ciuffoletti/occimon-demo.git
+$ cd occimon-demo
+```
+
 * Run
 
 ```
@@ -23,6 +29,14 @@ You need to have VirtualBox and Vagrant installed on the guest machine to run th
 $ vagrant up
 ```
 The system is generated and booted. The first time you run this command a disk image will be downloaded, so expect a significant delay.
+
+* Launch the minimalistic http server on **server**:
+
+```
+#!console
+vagrant@server:~$ sudo service httpServer start 
+Server pronto...
+```
 
 * Launch the metric container on **pc1**. Use the command "probe.sh" with the id of the monitored resource urn:uuid:c2222
 
@@ -36,7 +50,7 @@ Metric container is ready (192.168.5.3:12312)
 ```
 The metric container is now up and running, and waits for input from the sensor
 
-* Launch the sensor container on **sensor**. Use the command "sensor.sh" with the id of the sensor resource(s): urn:uuid:s1111
+* Open another terminal to launch the sensor container on **sensor**. Use the command "sensor.sh" with the id of the sensor resource(s): urn:uuid:s1111
 
 ```
 #!console
